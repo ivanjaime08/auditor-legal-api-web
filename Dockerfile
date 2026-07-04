@@ -12,4 +12,7 @@ COPY . .
 
 # Arranca la API. Render pone el puerto en la variable $PORT.
 RUN chmod +x start.sh
-CMD ["./start.sh"]
+COPY . .
+
+RUN chmod +x start.sh
+CMD ["bash", "start.sh"]
